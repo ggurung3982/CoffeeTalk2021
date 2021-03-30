@@ -4,7 +4,7 @@ const createUser = async (req, res) => {
   const { userId, userName } = req.body;
 
   axios
-    .post('https://chatengine.io/projects/97cae069-70a1-40ca-bd55-b8710731ab1d/',
+    .post('https://chatengine.io/projects/people/',
       { username: userName, secret: userId },
       { headers: { 'Private-Key': process.env.chat_engine_private_key } },
     )
