@@ -35,6 +35,7 @@ export const ChatProvider = ({ children, authUser }) => {
 
   // Set the chat config once the
   // authUser has initialized.
+  //projectId
   useEffect(() => {
     if (authUser) {
       fb.firestore
