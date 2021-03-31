@@ -2,7 +2,7 @@ import firebase from 'firebase/app'; // <-- This must be first
 import 'firebase/auth';
 import 'firebase/storage';
 import 'firebase/firestore';
-import config from './config';
+import config from './../config';
 
 firebase.initializeApp(config);
 // try {
