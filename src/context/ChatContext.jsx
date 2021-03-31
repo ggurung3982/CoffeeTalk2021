@@ -44,8 +44,8 @@ export const ChatProvider = ({ children, authUser }) => {
         .onSnapshot(snap => {
           setChatConfig({
             userSecret: authUser.uid,
-            avatar: snap.data().avatar,
-            userName: snap.data().userName,
+            avatar: snap.data() && snap.data().avatar,
+            userName: snap.data() && snap.data().userName,
             projectID: '97cae069-70a1-40ca-bd55-b8710731ab1d',
           });
         });

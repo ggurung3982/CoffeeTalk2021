@@ -25,7 +25,9 @@ export const ChatAvatar = ({ chat, username, className }) => {
   ) : (
     <div className={className || 'empty-avatar'}>
       {chat.people
-        .find(p => p.person.username !== chatConfig.userName)
+        .find(p => {
+          return p.person && p.person.username !== chatConfig.userName;
+        })
         .person.username[0].toUpperCase()}
     </div>
   );
