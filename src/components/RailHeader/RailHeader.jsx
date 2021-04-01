@@ -15,6 +15,11 @@ export const RailHeader = () => {
     setImage(file);
   };
 
+  const onLogOut = () => {
+    fb.auth.signOut();
+    window.location.reload(true);
+  };
+
   return (
     <>
       <input
@@ -59,7 +64,7 @@ export const RailHeader = () => {
 
       <div className="left-rail-header">
         <div
-          onClick={() => fb.auth.signOut()}
+          onClick={() => onLogOut()}
           className="sign-out"
           name="sign out"
         >Log Out</div>
