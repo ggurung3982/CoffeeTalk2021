@@ -19,14 +19,29 @@ code {
   overflow: hidden;
   align-items: center;
   justify-content: center;
-  background-color: #121212;
+  background-color: burlywood;
+}
+.login-app{
+  height: 100%;
+}
+.coffee-talk{
+  width: 37%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  margin-top: 6rem;
+  border-radius: 10px;
+  box-shadow: black 0px 0px 10px;
 }
 .auth-form {
+  margin-top: 5px;
+  margin-left: auto;
+  margin-right: auto;
   width: 500px;
   padding: 25px;
   max-width: 100%;
   border-radius: 10px;
-  background-color: #15202b;
+  background-color: darkgoldenrod;
   box-shadow: 0px 0px 10px black;
 }
 .auth-form label {
@@ -53,16 +68,17 @@ code {
   box-shadow: 0px 0px 3px black;
 }
 .auth-form button:disabled {
-  color: darkgray;
+  color: black;
   cursor: not-allowed;
-  background-color: gray;
+  background-color: antiquewhite;
+  font-weight: 700;
 }
 .auth-link-container {
   margin-top: 25px;
   margin-bottom: 25px;
 }
 .auth-link {
-  color: gray;
+  color: black;
   cursor: pointer;
   font-weight: bold;
 }
@@ -113,15 +129,12 @@ code {
 }
 .chat-list-item .selected,
 .chat-list-item:hover {
-  background-color: #18181d;
+  background-color: navajowhite;
 }
 .chat-list-avatar {
   width: 28px;
   height: 28px;
   border-radius: 100%;
-}
-.selected-chat-item {
-  background-color: #18181d;
 }
 .chat-item-delete {
   width: 35px;
@@ -138,6 +151,10 @@ code {
 .chat-list-preview {
   margin-left: 10px;
 }
+.chat-list-preview .preview-username, .chat-list-preview .preview-message{
+  color: black;
+  font-size: 16px;
+}
 .create-chat-button {
   width: 100%;
   height: 50px;
@@ -146,7 +163,9 @@ code {
   color: white;
   cursor: pointer;
   border-radius: 0px;
-  background-color: #030a24;
+  background-color: darkgoldenrod;
+  font-weight: 700;
+  font-size: 20px;
 }
 .preview-message {
   font-size: 12px;
@@ -175,7 +194,7 @@ code {
   padding: 10px;
   position: relative;
   align-items: center;
-  background-color: #161616;
+  background-color: darkgoldenrod;
   box-shadow: 0px 0px 2px black;
 }
 .current-user-info {
@@ -201,7 +220,7 @@ code {
   height: 100%;
   display: flex;
   justify-content: center;
-  background-color: #292b31;
+  background-color: navajowhite;
 }
 .no-chat-selected {
   display: flex;
@@ -239,7 +258,7 @@ code {
   padding-left: 25px;
   padding-right: 25px;
   align-items: center;
-  background-color: #121212;
+  background-color: antiquewhite;
   justify-content: space-between;
 }
 .chat-header-text {
@@ -265,6 +284,7 @@ code {
   padding-top: 0px;
   padding-bottom: 0px;
   height: calc(100% - 105px);
+  color: black;
 }
 .chat-message {
   display: flex;
@@ -294,7 +314,10 @@ code {
   font-size: 24px;
 }
 .message-content {
-  padding-left: 25px;
+  margin: 0 50px 0 50px;
+  padding: 5px 8px 0;
+  border-radius: 5px;
+  background-color: antiquewhite
 }
 .message-text {
   font-size: 14px;
@@ -311,7 +334,7 @@ code {
   border-radius: 5px;
   align-items: center;
   width: calc(100% - 50px);
-  background-color: #23252c;
+  background-color: antiquewhite;
   box-shadow: 0px 0px 3px black;
 }
 .attachment-icon {
@@ -323,7 +346,6 @@ code {
   padding-bottom: 5px;
   align-items: center;
   justify-content: center;
-  background-color: #1f2026;
 }
 .attachment-icon:hover {
   background-color: #2f313a;
@@ -333,8 +355,7 @@ code {
   border: none;
   height: 100%;
   outline: none;
-  color: #f2f2f2;
-  caret-color: white;
+  caret-color: black;
   background-color: transparent;
 }
 .send-message-icon {
@@ -407,7 +428,9 @@ code {
 
 .sign-out {
   position: absolute;
-  top: 5px;
   right: 5px;
   cursor: pointer;
+  bottom: 5px;
+  font-size: 16px;
+  font-weight: 700;
 }

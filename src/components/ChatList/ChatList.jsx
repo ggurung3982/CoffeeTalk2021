@@ -13,20 +13,26 @@ export const ChatList = () => {
     deleteChatClick,
   } = useChat();
 
+  let myNewChat = [];
+  myChats.map(myChat => {
+    if (myChat.people.length === 2) {
+      myNewChat.push(myChat);
+    }
+  });
+
   return (
     <div className="chat-list">
-      {myChats.map((c, index) => (
+      {myNewChat.map((c, index) => (
         <div
-          className={`chat-list-item ${
-            selectedChat?.id === c.id ? 'selected-chat-item' : ''
-          }`}
+          className={`chat-list-item ${selectedChat?.id === c.id ? 'selected-chat-item' : ''
+            }`}
           key={index}
         >
           <div
             onClick={() => selectChatClick(c)}
             className="chat-list-item-content"
           >
-            {c.people.length === 1 ? (
+            {c.people.length === 0 ? (
               <>
                 <Icon circular inverted color="violet" name="user cancel" />
                 <div className="chat-list-preview">
