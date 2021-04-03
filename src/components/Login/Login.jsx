@@ -33,7 +33,7 @@ export const Login = () => {
 
   return (
     <div class="login-app">
-      <img src="/img/coffee_talk.png" class="coffee-talk" alt="" />
+      <img src="/img/coffeeTalk.png" class="coffee-talk" alt="" />
 
       <div className="auth-form">
         <h1>Login</h1>
