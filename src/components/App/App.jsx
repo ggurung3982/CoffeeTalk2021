@@ -2,8 +2,8 @@ import { useEffect } from 'react';
 import { ChatProvider } from 'context';
 import 'semantic-ui-css/semantic.min.css';
 import { useAuth, useResolved } from 'hooks';
-import { Login, Signup, Chat } from 'components';
-import { Switch, Route, useHistory } from 'react-router-dom';
+import { Header, Login, Signup, Chat, Footer, Contact, Help, Home } from 'components';
+import { Switch, Route, BrowserRouter as Router, useHistory } from 'react-router-dom';
 
 export const App = () => {
   const history = useHistory();
@@ -19,16 +19,24 @@ export const App = () => {
     }
   }, [authResolved, authUser, history]);
 
+
   return authResolved ? (
-    <ChatProvider authUser={authUser}>
-      <div className="app">
-        <Switch>
-          <Route path="/" exact component={Chat} />
-          <Route path="/login" component={Login} />
-          <Route path="/signup" component={Signup} />
-        </Switch>
-      </div>
-    </ChatProvider>
+    <div>
+      <Header />
+      <ChatProvider authUser={authUser}>
+        <div className="app">
+          <Switch>
+            <Route path="/" exact component={Chat} />
+            <Route path="/home" exact component={Chat} />
+            <Route path="/login" component={Login} />
+            <Route path="/signup" component={Signup} />
+            <Route path="/help" component={Help} />
+            <Route path="/contact" component={Contact} />
+          </Switch>
+        </div>
+      </ChatProvider>
+      <Footer />
+    </div>
   ) : (
     <>Loading...</>
   );

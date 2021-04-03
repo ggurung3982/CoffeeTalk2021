@@ -14,7 +14,7 @@ code {
 .app {
   width: 100vw;
   color: white;
-  height: 100vh;
+  height: 90vh;
   display: flex;
   overflow: hidden;
   align-items: center;
@@ -23,13 +23,15 @@ code {
 }
 .login-app{
   height: 100%;
+  margin-bottom: 10px;
 }
 .coffee-talk{
-  width: 37%;
+  width: 46%;
+  height: 45%;
+  margin-top: 2rem;
   margin-left: auto;
   margin-right: auto;
   display: block;
-  margin-top: 6rem;
   border-radius: 10px;
   box-shadow: black 0px 0px 10px;
 }
@@ -54,6 +56,31 @@ code {
   border-radius: 5px;
   border: 1px solid black;
   background-color: #d2d2d2;
+}
+nav{
+  display: flex !important;
+    justify-content: space-around;
+    background: darkgoldenrod;
+    font-size: 20px;
+    font-weight: 700;
+    height: 40px;
+    align-items: center;
+    color: black;
+}
+nav a{
+  color: black;
+}
+footer{
+  background-color: darkgoldenrod;
+  height: 40px;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: absolute;
+}
+.contact{
+  color: black;
 }
 .auth-form button {
   padding: 10px;

@@ -2,11 +2,8 @@ import { useEffect } from 'react';
 import { useChat } from 'context';
 import { getChats, ChatEngine } from 'react-chat-engine';
 import { LeftRail, ChatToolbar, ChatInput, MessageList } from 'components';
-import { useAuth, useResolved } from 'hooks';
-import { useHistory } from 'react-router-dom';
 
-
-export const Chat = () => {
+export const Home = () => {
   const {
     myChats,
     setMyChats,
@@ -15,14 +12,6 @@ export const Chat = () => {
     selectChatClick,
     setSelectedChat,
   } = useChat();
-  const history = useHistory();
-  const { authUser } = useAuth();
-  const authResolved = useResolved(authUser);
-  useEffect(() => {
-    if (authResolved) {
-      history.push(!!authUser ? '/' : '/login');
-    }
-  }, [authResolved, authUser, history]);
 
   useEffect(() => {
     console.log('My Chats: ', myChats);
@@ -34,7 +23,7 @@ export const Chat = () => {
 
   return (
     <>
-      {authUser != null && !!chatConfig && (
+      {!!chatConfig && (
         <ChatEngine
           hideUI={true}
           userName={chatConfig.userName}
@@ -77,29 +66,27 @@ export const Chat = () => {
         />
       )}
 
-      {authUser != null && (
-        <div className="chat-container">
-          <LeftRail />
-          <div className="current-chat">
-            {selectedChat ? (
-              <div className="chat">
-                <ChatToolbar />
-                <MessageList />
-                <ChatInput />
-              </div>
-            ) : (
-              <div className="no-chat-selected">
-                <img
-                  src="/img/pointLeft.png"
-                  className="point-left"
-                  alt="point-left"
-                />
-                Select A Chat
-              </div>
-            )}
-          </div>
+      <div className="chat-container">
+        <LeftRail />
+        <div className="current-chat">
+          {selectedChat ? (
+            <div className="chat">
+              <ChatToolbar />
+              <MessageList />
+              <ChatInput />
+            </div>
+          ) : (
+            <div className="no-chat-selected">
+              <img
+                src="/img/pointLeft.png"
+                className="point-left"
+                alt="point-left"
+              />
+              Select A Chat
+            </div>
+          )}
         </div>
-      )}
+      </div>
     </>
   );
 };

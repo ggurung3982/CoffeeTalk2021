@@ -12,3 +12,8 @@ export * from './ChatToolbar';
 export * from './SearchUsers';
 export * from './MessageList';
 export * from './ImageUpload';
+export * from './Header';
+export * from './Footer';
+export * from './Contact';
+export * from './Help';
+export * from './Home';

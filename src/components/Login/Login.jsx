@@ -32,8 +32,8 @@ export const Login = () => {
   };
 
   return (
-    <div class="login-app">
-      <img src="/img/coffeeTalk.png" class="coffee-talk" alt="" />
+    <div className="login-app">
+      <img src="/img/coffeeTalk.png" className="coffee-talk" alt="" />
 
       <div className="auth-form">
         <h1>Login</h1>
