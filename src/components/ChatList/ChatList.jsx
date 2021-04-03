@@ -18,6 +18,7 @@ export const ChatList = () => {
     if (myChat.people.length === 2) {
       myNewChat.push(myChat);
     }
+    return myNewChat;
   });
 
   return (
