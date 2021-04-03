@@ -85,7 +85,7 @@ export const RailHeader = () => {
                 <Image src={chatConfig.avatar} avatar />
               ) : (
                 <div className="empty-avatar">
-                  {chatConfig.userName.split("")[0].toUpperCase()}
+                  {chatConfig.userName && chatConfig.userName.split("")[0].toUpperCase()}
                 </div>
               )}
 
